@@ -1,0 +1,29 @@
+{
+    "holding_period": 15,
+    "risk_pct": 0.02,
+    "position_value": 1000,
+    "time_frame": "4h",
+    "reward_scaling": 1.0,
+    "reward_shaping": true,
+    "use_drawdown_penalty": true,
+    "episodes": 20,
+    "early_stop_patience": 5,
+    "eval_interval": 2,
+    "batch_size": 32,
+    "target_kl": 0.02,
+    "use_curriculum": false,
+    "state_size": 21,
+    "clip_ratio": 0.1,
+    "policy_lr": 0.0005,
+    "value_lr": 0.001,
+    "entropy_beta": 0.01,
+    "gamma": 0.95,
+    "lam": 0.95,
+    "train_epochs": 5,
+    "action_bounds": [
+        0.1,
+        0.5
+    ],
+    "price_target_pct": 0.1,
+    "risk_reward_ratio": 5.0
+}
