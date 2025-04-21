@@ -3,13 +3,23 @@
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
 ## Build Commands
-- Setup environment: `python -m venv venv && source venv/bin/activate && pip install -r PPO/requirements.txt`
-- Run PPO training: `cd PPO && python main.py --mode train --data data/ETHUSDT_4h_data.csv --sample_size 500`
-- Run PPO backtest: `cd PPO && python main.py --mode backtest --data data/ETHUSDT_4h_data.csv --visualize`
-- Run PPO hybrid mode: `cd PPO && python main.py --mode hybrid --data data/ETHUSDT_4h_data.csv --visualize`
+- Setup environment: `python -m venv venv && source venv/bin/activate && pip install -r requirements.txt`
+- Run PPO training: `cd PPO && python main.py --mode train --data ../data/ETHUSDT_4h_data.csv --sample_size 500`
+- Run PPO backtest: `cd PPO && python main.py --mode backtest --data ../data/ETHUSDT_4h_data.csv --visualize`
+- Run PPO hybrid mode: `cd PPO && python main.py --mode hybrid --data ../data/ETHUSDT_4h_data.csv --visualize`
 - Run basic tests: `cd PPO && python test_script.py` 
-- Test project structure: `cd PPO && python test_script.py`
 - Note: The DQN implementation is incomplete and missing modules like `environments.enhanced_trading_env`
+
+## Project Structure
+- The `data/` directory contains all datasets and data utilities
+- Virtual environment and requirements are centralized in the project root
+- The `PPO/` directory contains the main implementation
+- The `DQN/` directory contains an alternative implementation (incomplete)
+
+## Data Files
+- `data/ETHUSDT_4h_data.csv` - Primary dataset with 4-hour ETHUSDT data and Ichimoku indicators
+- `data/ETHUSDT_4_hours_data.csv` - Alternative format used by enhanced_training_pipeline.py
+- `data/alternative_approach.py` - Utility for fetching data from Binance API
 
 ## Code Style Guidelines
 - Imports: group standard library imports first, then third party, then local

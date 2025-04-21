@@ -45,9 +45,8 @@ The project is organized into two main implementations:
 
 3. Install dependencies:
    ```bash
-   pip install -r PPO/requirements.txt
+   pip install -r requirements.txt
    ```
-
 ## Usage
 
 The system can be used in multiple modes:
@@ -58,7 +57,7 @@ Train a new PPO agent on historical cryptocurrency data:
 
 ```bash
 cd PPO
-python main.py --mode train --data data/ETHUSDT_4h_data.csv
+python main.py --mode train --data ../data/ETHUSDT_4h_data.csv --sample_size 500
 ```
 
 ### Backtesting Mode
@@ -67,7 +66,7 @@ Backtest the trained agent on historical data:
 
 ```bash
 cd PPO
-python main.py --mode backtest --data data/ETHUSDT_4h_data.csv --visualize
+python main.py --mode backtest --data ../data/ETHUSDT_4h_data.csv --visualize
 ```
 
 ### Hybrid Strategy Mode
@@ -76,7 +75,7 @@ Run the hybrid strategy that combines AI predictions with Ichimoku signals:
 
 ```bash
 cd PPO
-python main.py --mode hybrid --data data/ETHUSDT_4h_data.csv --visualize
+python main.py --mode hybrid --data ../data/ETHUSDT_4h_data.csv --visualize
 ```
 
 ### Command-line Arguments
@@ -141,6 +140,13 @@ The `visualization.py` module:
 - Provides detailed component analysis
 - Creates comparison charts for different strategies
 
+### Data Files
+
+The project includes a central data directory with essential files:
+
+- `data/ETHUSDT_4h_data.csv`: Primary dataset with 4-hour ETHUSDT price data including Ichimoku indicators
+- `data/ETHUSDT_4_hours_data.csv`: Alternative dataset format used by the enhanced training pipeline
+- `data/alternative_approach.py`: Module for fetching cryptocurrency data from Binance API
 ## Performance Metrics
 
 The system calculates the following performance metrics:

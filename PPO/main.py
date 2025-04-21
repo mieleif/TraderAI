@@ -39,7 +39,7 @@ def setup_logger():
     
     return logging.getLogger(__name__)
 
-def load_data(filepath='data/ETHUSDT_4h_data.csv'):
+def load_data(filepath='../data/ETHUSDT_4h_data.csv'):
     """
     Load and prepare data from CSV file
     """
@@ -500,7 +500,7 @@ def parse_arguments():
                         choices=['train', 'backtest', 'hybrid'],
                         help='Operation mode: train, backtest, or hybrid')
     
-    parser.add_argument('--data', type=str, default='data/ETHUSDT_4h_data.csv',
+    parser.add_argument('--data', type=str, default='../data/ETHUSDT_4h_data.csv',
                         help='Path to the data file')
     
     parser.add_argument('--model', type=str, default=None,

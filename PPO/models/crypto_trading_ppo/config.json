@@ -24,6 +24,8 @@
         0.1,
         0.5
     ],
-    "price_target_pct": 0.1,
-    "risk_reward_ratio": 5.0
+    "price_target_pct": 0.05,
+    "risk_reward_ratio": 5.0,
+    "ichimoku_warmup_period": 52,
+    "inactivity_threshold": 50
 }

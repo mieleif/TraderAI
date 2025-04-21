@@ -544,7 +544,7 @@ if __name__ == "__main__":
     from models.stable_ppo_agent import StablePPOAgent
     
     # Load data
-    df = pd.read_csv('data/ETHUSDT_4_hours_data.csv')
+    df = pd.read_csv('../data/ETHUSDT_4_hours_data.csv')
     
     # Create training pipeline
     pipeline = EnhancedTrainingPipeline(

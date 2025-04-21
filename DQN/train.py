@@ -12,7 +12,7 @@ from IPython.display import clear_output
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-def load_data(filepath='data/ETHUSDT_4h_data.csv'):
+def load_data(filepath='../data/ETHUSDT_4h_data.csv'):
     """
     Load and prepare data from CSV file
     """
